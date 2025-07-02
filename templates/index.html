@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Huffman </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Updated: Feb 22 2025 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        img {
+            margin: 10px;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .graph img {
+                  width: 100%;
+                  max-width: 600px;
+                  height: auto;
+                  margin: 0 auto;
+                  display: block;
+                  border: 1px solid #ccc;
+                  border-radius: 8px;
+                  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .output {
+            margin-top: 30px;
+        }
+
+        .graph {
+            margin-top: 20px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="#hero" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="static/assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">Huffman </h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#services">Compress</a></li>    
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="/">Logout</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <p>Welocme To Dashboard</p>
+            <h2>Huffman Based LZW Lossless Image Compression Using Retinex Algorithm</h2>
+            <div class="d-flex">
+              <a href="#services" class="btn-get-started">Get Started</a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="static/assets/img/hero-img.png" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+      <h1>Huffman + LZW Lossless Compression with Retinex</h1>
+
+    <form action="/text" method="POST" enctype="multipart/form-data">
+        <h3>Text File Compression</h3>
+        <input type="file" name="text_file" accept=".txt" required>
+        <br>
+        <button type="submit">Compress & Decompress Text</button>
+    </form>
+
+    <form action="/image" method="POST" enctype="multipart/form-data">
+        <h3>Image Compression with Retinex</h3>
+        <input type="file" name="image_file" accept="image/*" required>
+        <br>
+        <button type="submit">Compress Image</button>
+    </form>
+
+    {% if error_message %}
+    <div class="error">
+        <p>{{ error_message }}</p>
+    </div>
+    {% endif %}
+
+    {% if text_uploaded %}
+        <h3>Text Compression Results</h3>
+        <p><strong>Original Size:</strong> {{ original_size }} bytes</p>
+        <p><strong>Compressed Size:</strong> {{ compressed_size }} bytes</p>
+
+        <a href="{{ url_for('download_compressed_file', filename=compressed_file_name) }}" class="btn btn-success" download>
+            Download Compressed File
+        </a>
+
+        {% if graph %}
+            <h4>Size Comparison Graph</h4>
+            <div class="graph">
+              <img src="{{ url_for('static', filename='graph.png') }}"  >
+            </div>
+            
+        {% endif %}
+    {% endif %}
+
+
+    {% if image_uploaded %}
+  <h3>Image Compression Result</h3>
+  <p><strong>Original Size:</strong> {{ original_size }} bytes</p>
+  <p><strong>Compressed Size:</strong> {{ compressed_size }} bytes</p>
+
+  <h4>Original Image</h4>
+  <img src="{{ url_for('static', filename='uploads/' + original_image) }}" width="300">
+
+  {% if compressed_image %}
+  <h4>Compressed Image</h4>
+  <img src="{{ url_for('static', filename='compress/' + compressed_image) }}" width="300">
+  <a href="{{ url_for('send_compressed_image', filename=compressed_image) }}" download>Download Compressed</a>
+  {% endif %}
+
+  {% if retinex_image %}
+  <h4>Retinex Enhanced Compressed Image</h4>
+  <img src="{{ url_for('static', filename='compress/' + retinex_image) }}" width="300">
+  <a href="{{ url_for('send_compressed_image', filename=retinex_image) }}" download>Download Retinex</a>
+  {% endif %}
+
+  {% if graph %}
+    <h4>Compression Graph</h4>
+    <div class="graph">
+      <img src="{{ url_for('static', filename='graph.png') }}" >
+    </div>
+    
+  {% endif %}
+{% endif %}
+
+
+    </section><!-- /Services Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Huffman</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
