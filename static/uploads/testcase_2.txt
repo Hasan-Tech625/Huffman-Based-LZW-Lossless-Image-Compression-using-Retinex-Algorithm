@@ -1,0 +1,21 @@
+The Huffman coding algorithm is a widely used method for lossless data compression. It assigns variable-length codes to input characters, with shorter codes assigned to more frequent characters. The goal is to minimize the total size of the encoded message.
+
+Key Concepts of Huffman Coding:
+Frequency-based Encoding: Huffman coding uses the frequency of each character in the input data to build an optimal binary tree (called the Huffman Tree).
+
+Optimality: It minimizes the total number of bits used to represent the data.
+
+Prefix-Free: The codes assigned to each character are such that no code is a prefix of another, ensuring that the codes can be uniquely decoded.
+
+Steps in Huffman Coding:
+Calculate Frequency: Calculate the frequency of each character in the data to be encoded.
+
+Build the Huffman Tree:
+
+Treat each character as a node with its frequency.
+
+Build a binary tree by repeatedly merging the two nodes with the lowest frequencies until only one node (the root of the tree) remains.
+
+Assign Codes: Traverse the Huffman tree and assign binary codes (0 or 1) to each character. The more frequent characters get shorter codes, while the less frequent characters get longer codes.
+
+Encode the Data: Replace each character in the original data with its corresponding Huffman code.
