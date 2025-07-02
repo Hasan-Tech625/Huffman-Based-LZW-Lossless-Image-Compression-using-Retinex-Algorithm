@@ -1,0 +1,3 @@
+While Tesseract is a solid OCR tool, it might not be as robust or accurate in complex images, noisy backgrounds, or stylized fonts. For better accuracy, especially in diverse real-world environments like Google Lens, you would likely need more advanced machine learning models that combine object detection (CNNs) with OCR and context understanding (transformers or similar models).
+
+For advanced text recognition in images, including things like curved text or text in natural scenes, you might need to explore custom models using deep learning frameworks like TensorFlow, PyTorch, or other commercial APIs like Google Cloud Vision or AWS Rekognition.

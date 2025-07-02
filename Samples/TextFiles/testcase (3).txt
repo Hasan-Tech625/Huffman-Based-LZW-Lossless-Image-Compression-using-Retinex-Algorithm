@@ -1,0 +1,4 @@
+Applications of Huffman Coding:
+Data Compression: Huffman coding is widely used in file compression algorithms like ZIP, GZIP, and in image formats like PNG and JPEG.
+
+Text Encoding: It’s used in text file compression algorithms, such as those found in software and hardware encoding schemes.
